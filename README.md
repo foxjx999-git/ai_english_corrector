@@ -102,12 +102,6 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 python main.py
 ```
-Streamlit Web 版：
-
-```bash
-streamlit run app.py
-```
-
 运行后可以直接输入英文句子，或者输入命令，例如：
 ```text
 help
@@ -117,6 +111,12 @@ review
 report
 export
 q
+```
+
+Streamlit Web 版：
+
+```bash
+streamlit run app.py
 ```
 
 ## Web 版功能
