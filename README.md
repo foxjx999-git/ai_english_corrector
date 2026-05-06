@@ -19,6 +19,7 @@ AI English Corrector 是一个面向中文学习者的 AI 英语纠错学习助�
 - 生成学习报告
 - 导出学习记录
 - 清空历史记录
+- 提供 Streamlit Web 页面
 
 ## 命令说明
 - `help`：查看所有可用命令
@@ -37,6 +38,7 @@ AI English Corrector 是一个面向中文学习者的 AI 英语纠错学习助�
 
 ```text
 ai_english_corrector/
+├── app.py
 ├── main.py
 ├── corrector.py
 ├── prompts.py
@@ -56,6 +58,7 @@ ai_english_corrector/
 - `data/` 文件夹用于保存本地练习记录，运行程序后自动生成。
 
 ## 文件说明
+- `app.py`：Streamlit Web 版入口，负责网页界面展示
 - `main.py`：程序入口，负责命令行交互和命令分发
 - `corrector.py`：负责英文纠错和 review 答案评价
 - `prompts.py`：管理发送给 AI 的 prompt
@@ -94,9 +97,17 @@ OPENAI_API_KEY=your_api_key_here
 
 ### 4. 运行项目
 
+命令行版：
+
 ```bash
 python main.py
 ```
+Streamlit Web 版：
+
+```bash
+streamlit run app.py
+```
+
 运行后可以直接输入英文句子，或者输入命令，例如：
 ```text
 help
@@ -107,6 +118,20 @@ report
 export
 q
 ```
+
+## Web 版功能
+
+````markdown
+Streamlit Web 版支持以下页面：
+
+- `Correct`：输入英文句子，AI 自动纠错并保存记录
+- `Stats`：查看错误统计表格和柱状图
+- `History`：查看最近练习记录
+- `Report`：查看学习报告和推荐复习方向
+- `Review`：随机或按错误类型复习错句，并由 AI 评价答案
+- `Manage`：导出或清空本地学习记录
+```
+
 ## 示例
 
 输入：
@@ -197,12 +222,13 @@ report
 
 ## 当前版本
 
-V1.9 命令行版功能整理完成。
+V2.8 Streamlit Web 版基础功能完成。
 
 ## 后续计划
-- 做成 Streamlit Web 版
-- 支持图表展示错误统计
+
+- 增加 Web 版 Review 页面更多交互优化
 - 使用 SQLite 保存练习数据
 - 支持更完整的学习报告
 - 增加用户学习进度追踪
-- 上传 GitHub 并整理项目截图
+- 增加项目截图
+- 部署到线上
