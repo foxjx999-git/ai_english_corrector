@@ -121,7 +121,7 @@ q
 
 ## Web 版功能
 
-````markdown
+```markdown
 Streamlit Web 版支持以下页面：
 
 - `Correct`：输入英文句子，AI 自动纠错并保存记录
@@ -130,94 +130,6 @@ Streamlit Web 版支持以下页面：
 - `Report`：查看学习报告和推荐复习方向
 - `Review`：随机或按错误类型复习错句，并由 AI 评价答案
 - `Manage`：导出或清空本地学习记录
-```
-
-## 示例
-
-输入：
-
-```text
-i very like this movie
-```
-
-输出示例：
-
-```text
-Original:
-i very like this movie
-
-Corrected:
-I really like this movie.
-
-Explanation:
-原句中 “i” 需要大写为 “I”。另外，“very” 不能直接修饰动词 “like”。
-
-More Natural:
-I like this movie very much.
-
-Error Type:
-capitalization, word_choice, grammar
-
-Suggestion:
-注意人称代词 I 永远大写，并积累 really like / like ... very much 这类自然表达。
-```
-
-## Review 复习模式示例
-
-输入：
-```text
-review grammar
-```
-
-程序会随机抽取一条语法错误记录，让用户先尝试修改，然后由 AI 评价修改结果。
-
-示例：
-
-```text
-原句:
-i am agree with you
-
-请你先尝试修改这句话:
-I agree with you
-
-AI 评价:
-你的句子语法正确，但句末建议加句号，使书面表达更规范。
-
-评分:
-90/100
-
-是否完全正确:
-否
-
-更好的答案:
-I agree with you.
-```
-
-## 学习报告示例
-
-输入：
-
-```text
-report
-```
-
-输出示例：
-
-```text
-学习报告：
-
-总练习次数：3
-
-最常见错误 Top 3：
-1. capitalization (大小写错误): 3 次
-2. grammar (语法错误): 2 次
-3. punctuation (标点错误): 2 次
-
-学习建议：
-你最近最常出现的是大小写错误。建议重点注意句首大写，以及人称代词 I 永远大写。
-
-推荐下一步：
-输入 review capitalization 复习大小写错误。
 ```
 
 ## 当前版本
